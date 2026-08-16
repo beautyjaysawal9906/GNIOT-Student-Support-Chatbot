@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNIOT Student Support Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header class="header">
+        <div class="logo">G</div>
+        <div>
+            <h1>GNIOT Student Support</h1>
+            <p>AI-powered student assistance</p>
+        </div>
+        <div class="status">
+            <span class="status-dot"></span>
+            Online
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <aside class="student-card">
+            <div class="profile-circle" id="profileLetter">B</div>
+
+            <h2 id="studentName">Beauty</h2>
+            <p class="student-label">Student</p>
+
+            <div class="student-info">
+                <div>
+                    <span>Course</span>
+                    <strong id="studentCourse">B.Tech</strong>
+                </div>
+
+                <div>
+                    <span>Year</span>
+                    <strong id="studentYear">3rd Year</strong>
+                </div>
+
+                <div>
+                    <span>Semester</span>
+                    <strong id="studentSemester">5th Semester</strong>
+                </div>
+            </div>
+
+            <div class="quick-title">Quick Services</div>
+
+            <button class="quick-btn" onclick="quickQuestion('What is GNIOT?')">
+                🏫 GNIOT Information
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What courses does GNIOT offer?')">
+                📚 Courses
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What is the attendance requirement?')">
+                📊 Attendance
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What is the admission process?')">
+                📝 Admission
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What facilities does GNIOT provide?')">
+                🏢 Facilities
+            </button>
+        </aside>
+
+        <section class="chat-section">
+
+            <div class="chat-header">
+                <div>
+                    <h2>Chat with Assistant</h2>
+                    <p>Ask me about GNIOT or general academic questions</p>
+                </div>
+
+                <button class="clear-btn" onclick="clearChat()">
+                    Clear Chat
+                </button>
+            </div>
+
+            <div class="messages" id="messages">
+
+                <div class="message bot-message">
+                    <div class="avatar">🤖</div>
+                    <div class="bubble">
+                        <strong>GNIOT Assistant</strong>
+                        <p>
+                            Hello! 👋 Welcome to the GNIOT Student Support Chatbot.
+                            I can help you with college information, courses,
+                            attendance, admission, facilities and general
+                            academic questions.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="suggestions">
+                <button onclick="quickQuestion('What is artificial intelligence?')">
+                    What is AI?
+                </button>
+
+                <button onclick="quickQuestion('How can I improve my Java skills?')">
+                    Java Skills
+                </button>
+
+                <button onclick="quickQuestion('What is machine learning?')">
+                    Machine Learning
+                </button>
+            </div>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Type your question here..."
+                    autocomplete="off"
+                >
+
+                <button id="sendButton" onclick="sendMessage()">
+                    Send ➤
+                </button>
+            </div>
+
+            <p class="footer-note">
+                GNIOT Student Support Chatbot • Java + Gemini AI
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
